@@ -3,6 +3,7 @@ package com.mirea.komkovaa.buttonclicker;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,8 +19,11 @@ public class MainActivity extends AppCompatActivity {
     private Button btnWhoAmI;
     private Button btnItIsNotMe ;
 
+
     public void onMyButtonClick(View view) {
         textViewStudent.setText("Это не я сделал");
+        CheckBox checkBox = findViewById(R.id.checkBox);
+        checkBox.setChecked(false);
         Toast.makeText(this, "Ещё один способ!", Toast.LENGTH_SHORT).show();
     }
 
@@ -32,10 +36,14 @@ public class MainActivity extends AppCompatActivity {
         btnWhoAmI = findViewById(R.id.button);
         btnItIsNotMe = findViewById(R.id.button2);
 
+
+
+        CheckBox checkBox = findViewById(R.id.checkBox);
         View.OnClickListener oclBtnWhoAmI = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 textViewStudent.setText("Мой номер по списку № 14");
+                checkBox.setChecked(true);
             }
         };
 
