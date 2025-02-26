@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "Lesson1"
 include(":app")
 include(":laouttype")
+include(":control_lesson1")
